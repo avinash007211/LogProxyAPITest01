@@ -13,12 +13,17 @@ namespace LogProxyAPI.Controllers
     {
         private readonly AppDbContext _context;
         private readonly int GetLogById;
-
+        /// <summary>
+        /// Initializing the data class object
+        /// </summary>         
         public LogsController(AppDbContext context)
         {
             _context = context;
         }
-
+        /// <summary>
+        /// Create All messages, which are logs here 
+        /// </summary>        
+        /// <returns>Create All logs with the log message id and saves in the sql database.</returns>
         [HttpPost("messages")]
         public async Task<IActionResult> CreateLog([FromBody] LogRequest request)
         {

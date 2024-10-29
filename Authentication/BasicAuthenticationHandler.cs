@@ -15,6 +15,8 @@ namespace LogProxyAPI.Authentication
 {
     public class BasicAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {
+        /*This constructor takes several dependencies needed for authentication, including options,
+        logging, encoding, and time handling.It passes these parameters to the base AuthenticationHandler class.*/
         public BasicAuthenticationHandler(
             IOptionsMonitor<AuthenticationSchemeOptions> options,
             ILoggerFactory logger,
